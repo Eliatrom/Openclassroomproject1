@@ -80,6 +80,46 @@ nav a:hover, a:active {
     color: #0065FC;
     padding-top: 1em;
 }
+/**** Research ************/
+.barre-recherche {
+    display: flex;
+    flex-direction: row;
+}
+.research h2 {
+    margin-bottom: 0.1em;
+}
+.research p {
+    margin-top: 0.1em;
+}
+.fa-location-dot {
+    padding: 1em;
+    color: black;
+    border-radius: 20px 0px 0px 20px;
+    border: solid;
+    border-color: #F2F2F2;
+    background-color: #F2F2F2;
+}
+#recherche {
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 2em;
+    font-weight: bold;
+    font-size: large;
+    border-color: #F2F2F2;
+    border-left: none;
+    border-right: none;
+    border-width: 0.125em;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #0065FC;
+    height: 100%;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0px 20px 20px 0px;
+  }
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
