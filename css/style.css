@@ -74,7 +74,13 @@ a {
     gap: 5em;
     margin-right: 2em;
 }
-nav a:hover, a:active {
+nav a:hover {
+    border-top: solid;
+    border-color: #0065FC;
+    color: #0065FC;
+    padding-top: 1em;
+}
+nav a:active {
     border-top: solid;
     border-color: #0065FC;
     color: #0065FC;
@@ -85,10 +91,10 @@ nav a:hover, a:active {
     display: flex;
     flex-direction: row;
 }
-.research h2 {
+.research-title h2 {
     margin-bottom: 0.1em;
 }
-.research p {
+.research-title p {
     margin-top: 0.1em;
 }
 .fa-location-dot {
@@ -119,6 +125,51 @@ input[type=button], input[type=submit], input[type=reset] {
     cursor: pointer;
     border-radius: 0px 20px 20px 0px;
   }
+/****** Filtres **********/
+.filtres-recherche {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 1em;
+}
+.filtres-recherche .filtre {
+    margin-left: 1em;
+    font-weight: bold;
+    border: 0.15em solid;
+    padding: 0.8em 1.5em 0.8em 1.5em;
+    border-radius: 1.5em;
+    border-color: #F2F2F2;
+    background: none;
+    font-size: medium
+}
+.filtres-recherche .filtre:hover {
+    background-color: rgb(0, 101, 252, 0.1);
+    cursor: pointer;
+}
+.filtres-recherche .filtre:active {
+    background-color: rgb(0, 101, 252, 0.1);
+}
+.infos-filtre {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+.infos-filtre i {
+    margin-top: 1em;
+}
+.fa-info {
+    border: 0.15em solid;
+    border-radius: 50%;
+    width: 1em;
+    border-color: #F2F2F2;
+    text-align: center;
+    font-size: 12px;
+    margin-left: 2em;
+    margin-right: 1.2em;
+    padding: 0.5em;
+    height: 100%;
+}
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -138,6 +189,52 @@ input[type=button], input[type=submit], input[type=reset] {
     width: 65%;
 }
 
+.hebergement-titre {
+    display: flex;
+    align-items: center;
+}
+.hebergements-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+.hebergements-cards .card{
+    display: flex;
+    flex-direction: column;
+    width: 14em;
+    margin-top: 1.5em;
+}
+.hebergements-cards img{
+    width: 100%;
+    height: 100px;
+    border-radius: 20px 20px 0 0;
+}
+.hebergements-cards .card-content {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+    font-size: small;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
+}
+.afficherplus {
+    margin-top: 2em;
+    font-weight: bold;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -151,12 +248,12 @@ input[type=button], input[type=submit], input[type=reset] {
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    margin-top: 30px;
 }
 
 .populaires-cards img {
     width: 33%;
-    height: 136px;
+    height: 120px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -182,7 +279,52 @@ input[type=button], input[type=submit], input[type=reset] {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+/****** Activites ********/
+.activites {
+    margin-left: 2em;
+}
+.activites h2{
+    margin-top: 2em;
+}
+.activites-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
 
+}
+.activites-cards .card {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+    width: 16em;
+    height: 100%;
+    padding: 0;
+}
+.activites-cards img {
+    width: 100%;
+    height: 20em;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.activites-cards .card-title {
+    margin-left: 1em;
+}
+/***** Footer ****/
+.footer {
+    display: flex;
+    justify-content: start;
+    background-color: #F2F2F2;
+    margin-top: 5em;
+}
+.liens-footer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10em;
+}
+.liens-footer li {
+    list-style-type: none;
+    margin-top: 0.5em;
+}
 
 
 
