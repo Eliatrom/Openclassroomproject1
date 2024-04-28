@@ -41,6 +41,29 @@ a {
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
+/**/
+.cardzz {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.cardzz img {
+    display: flex;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0;
+    height: 380px;
+}
+.cardzz h3 {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-right: 20px;
+}
+/**/
 
 .card img {
     object-fit: cover;
@@ -65,7 +88,7 @@ a {
     height: 4.938em;
 }
 .banner img {
-    padding: 1.5em;
+    padding: 0.5em 3em 3em 0.5em;
 }
 .banner ul {
     list-style-type: none;
@@ -74,39 +97,53 @@ a {
     gap: 5em;
     margin-right: 2em;
 }
+.banner li {
+    width: 6em;
+}
 nav a:hover {
-    border-top: solid;
+    border-top: 0.125em solid;
     border-color: #0065FC;
     color: #0065FC;
-    padding-top: 1em;
+    padding-top: 0.9em;
 }
 nav a:active {
-    border-top: solid;
+    border-top: 0.125em solid;
     border-color: #0065FC;
     color: #0065FC;
-    padding-top: 1em;
+    padding-top: 0.9em;
 }
 /**** Research ************/
 .barre-recherche {
     display: flex;
     flex-direction: row;
+    height: 3.5em;
 }
-.research-title h2 {
-    margin-bottom: 0.1em;
+.barre-recherche ::placeholder {
+    color: black;
+    opacity: 1;
+}
+.research-title h1 {
+    margin-bottom: 0;
 }
 .research-title p {
-    margin-top: 0.1em;
+    margin-top: 0.4em;
+    margin-bottom: 2em;
+    font-size: large;
 }
 .fa-location-dot {
-    padding: 1em;
+    display: inline-block;
+    padding: 0.8em 0.8em 0.5em 0.8em;
     color: black;
+    width: 0.8em;
+    font-size: 20px;
+    text-align: center;
     border-radius: 20px 0px 0px 20px;
     border: solid;
     border-color: #F2F2F2;
     background-color: #F2F2F2;
 }
-#recherche {
-    height: 100%;
+.recherche {
+    /*height: 100%;
     box-sizing: border-box;
     padding-left: 2em;
     font-weight: bold;
@@ -114,14 +151,35 @@ nav a:active {
     border-color: #F2F2F2;
     border-left: none;
     border-right: none;
-    border-width: 0.125em;
-}
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: #0065FC;
+    border-width: 0.125em;*/
     height: 100%;
+    box-sizing: border-box;
+    width: 11em;
+    margin: 0;
+    padding-left: 1.5em;
+    top: 0px;
+    left: 0px;
+    outline: none;
+    font-size: large;
+    font-weight: bold;
+    border-left: none;
+    border-right: none;
+    border-top: solid 2px var(--main-bg-color);
+    border-bottom: solid 2px var(--main-bg-color);
+}
+#submit-btn i {
+    display: none;
+}
+.barre-recherche button {
+    background-color: #0065FC;
+    height: 99%;
     border: none;
+    margin-left: -0.2em;
     color: white;
+    width: 9em;
     text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
     cursor: pointer;
     border-radius: 0px 20px 20px 0px;
   }
@@ -133,6 +191,7 @@ input[type=button], input[type=submit], input[type=reset] {
     margin-top: 1em;
 }
 .filtres-recherche .filtre {
+    display: flex;
     margin-left: 1em;
     font-weight: bold;
     border: 0.15em solid;
@@ -140,7 +199,16 @@ input[type=button], input[type=submit], input[type=reset] {
     border-radius: 1.5em;
     border-color: #F2F2F2;
     background: none;
-    font-size: medium
+    font-size: large;
+    flex-direction: row;
+    
+}
+.filtre p {
+    margin: -0.025em 0 0 0;
+}
+.filtre .fa-solid {
+    font-size: larger;
+    margin-right: 0.4em;
 }
 .filtres-recherche .filtre:hover {
     background-color: rgb(0, 101, 252, 0.1);
@@ -158,6 +226,9 @@ input[type=button], input[type=submit], input[type=reset] {
 .infos-filtre i {
     margin-top: 1em;
 }
+.infos-filtre p {
+    font-size: medium;
+}
 .fa-info {
     border: 0.15em solid;
     border-radius: 50%;
@@ -165,7 +236,6 @@ input[type=button], input[type=submit], input[type=reset] {
     border-color: #F2F2F2;
     text-align: center;
     font-size: 12px;
-    margin-left: 2em;
     margin-right: 1.2em;
     padding: 0.5em;
     height: 100%;
@@ -186,9 +256,15 @@ input[type=button], input[type=submit], input[type=reset] {
 
 /****** Hebergements ***********/
 .hebergements {
+    display: flex;
+    flex-direction: column;
     width: 65%;
+    row-gap: 30px;
 }
-
+.hebergements-and-populaires .hebergements section {
+    padding-left: 0;
+    padding-right: 0;
+}
 .hebergement-titre {
     display: flex;
     align-items: center;
@@ -196,6 +272,7 @@ input[type=button], input[type=submit], input[type=reset] {
 .hebergements-cards{
     display: flex;
     flex-direction: row;
+    row-gap: 30px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     box-sizing: border-box;
@@ -204,7 +281,10 @@ input[type=button], input[type=submit], input[type=reset] {
     display: flex;
     flex-direction: column;
     width: 14em;
-    margin-top: 1.5em;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
 }
 .hebergements-cards img{
     width: 100%;
@@ -219,7 +299,7 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 .hebergements-cards .card-title {
     margin-top: 10px;
-    margin-bottom: 4px;
+    margin-bottom: 7px;
 }
 
 .hebergements-cards .card-subtitle {
@@ -248,12 +328,12 @@ input[type=button], input[type=submit], input[type=reset] {
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 30px;
+    margin-top: 33px;
 }
 
 .populaires-cards img {
     width: 33%;
-    height: 120px;
+    height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -290,19 +370,19 @@ input[type=button], input[type=submit], input[type=reset] {
     display: flex;
     flex-direction: row;
     justify-content: start;
-
 }
 .activites-cards .card {
     display: flex;
     flex-direction: column;
     margin-right: 2em;
     width: 16em;
-    height: 100%;
+    height: 22.5em;
     padding: 0;
+    zoom: 115%;
 }
 .activites-cards img {
     width: 100%;
-    height: 20em;
+    height: 85%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -319,11 +399,14 @@ input[type=button], input[type=submit], input[type=reset] {
 .liens-footer {
     display: flex;
     flex-direction: column;
-    margin-right: 10em;
+    margin-right: 15em;
 }
 .liens-footer li {
     list-style-type: none;
     margin-top: 0.5em;
+}
+.liens-footer p {
+    font-weight: bold;
 }
 
 
@@ -335,6 +418,7 @@ input[type=button], input[type=submit], input[type=reset] {
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
         flex-direction: column;
+        gap: 20px;
     }
 
     .hebergements {
@@ -363,15 +447,127 @@ input[type=button], input[type=submit], input[type=reset] {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+    body {
+        width: 100%;
+        min-width: 768px;
+    }
 }
 
-/* Small devices (phones, less than 768px) */
+/* Small devices (phones, less than 768px more than 320px) */
 @media (max-width: 767.98px) {
-nav a:hover, a:active {
-    border-bottom: solid;
-    border-top: none;
+.main-container {
+    padding: 0;
+}
+.banner {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.banner img {
+    width: 100px; 
+    height: auto;
+    margin-bottom: 10px;
+    padding: 1em 0 0 0;
+}
+.banner ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    gap: 0;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+.banner li {
+    outline: none;
+    border-bottom: #F2F2F2 solid;
+    width: 50%;
+    text-align: center;
+    margin: 0;
+    padding-bottom:0.5em;
+}
+.fa-search {
+    color: white;
+}
+.btn-text {
+    display: none;
+}
+#submit-btn i {
+    display: inline;
+}
+#submit-btn {
+    width: 3em;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
+    margin-left: -1.2em;
+}
+.recherche {
+    width: calc(100% - 50px);
+    margin-right: 10px;
+}
+.banner li:hover, li:active {
     border-color: #0065FC;
-    color: #0065FC;
-    padding-bottom: 1em;
-    }
+    padding-bottom: 0.5em;
+}
+.banner a:hover, a:active {
+    outline: none;
+    border-top: none;
+    background-color: white;
+}
+.activites-cards {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1em;
+}
+.activites-cards .card{
+    height: auto;
+    width: 100%;
+}
+.filtres-recherche {
+    flex-wrap: wrap;
+}
+.activites {
+    margin: 0;
+}
+.footer {
+    flex-direction: column;
+}
+body {
+    width: 100%;
+}
+.populaires-cards {
+    flex-direction: column;
+}
+.populaires-cards a {
+    width: 100%;
+}
+.liens-footer { 
+    margin: 0;
+}
+.hebergements{
+    background-color: white;
+}
+.banner {
+    height: auto;
+}
+.filtres-recherche {
+    gap: 10px;
+}
+.filtres-recherche .filtre {
+    flex: 1 1 45%;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+.filtres-recherche h1 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.barre-recherche button {
+    height: 98%;
+  }
+
 }
