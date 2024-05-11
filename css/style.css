@@ -89,6 +89,7 @@ nav a:active {
     color: #0065FC;
     padding-top: 0.9em;
 }
+
 /**** Research ************/
 .barre-recherche {
     display: flex;
@@ -147,6 +148,7 @@ nav a:active {
     cursor: pointer;
     margin-left: -0.15em;
   }
+
 /****** Filtres **********/
 .filtres-recherche {
     margin-top: 35px;
@@ -158,6 +160,11 @@ nav a:active {
     margin: 0;
     font-size: 1.125em;
     font-weight: 700;
+}
+.filtres {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 .filtre1,
 .filtre2 {
@@ -412,9 +419,21 @@ nav a:active {
     body {
         width: 100%;
     }
+    .filtres-recherche {
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .filtres-recherche .filtres {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .filtres-recherche .filtre-title {
+        text-align: start;
+        margin-bottom: 10px;
+    }
     .hebergements-and-populaires {
         flex-direction: column;
-        gap: 20px;
     }
     .hebergements-and-populaires section {
         padding: 21px;
@@ -579,6 +598,9 @@ nav {
     flex-direction: column;
     align-items: normal;
     margin: 7%;
+}
+.filtres-recherche .filtres {
+    flex-direction: column;
 }
 .filtre {
     width: 48%;
