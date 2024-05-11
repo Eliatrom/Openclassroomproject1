@@ -257,15 +257,13 @@ nav a:active {
     justify-content: space-evenly;
     box-sizing: border-box;
 }
+.hebergements-cards a{
+    width: 30%;
+}
 .hebergements-cards .card{
     display: flex;
     flex-direction: column;
-    width: 15.5em;
     height: 13em;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
 }
 .hebergements-cards img{
     width: 100%;
@@ -276,7 +274,6 @@ nav a:active {
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 .hebergements-cards .card-title {
     margin-top: 10px;
@@ -289,7 +286,8 @@ nav a:active {
 }
 
 .hebergements-cards .card-rating {
-    margin: 1.5em 0 0 0;
+    margin-top: 8px;
+    margin-bottom: 5px;
 }
 .afficherplus {
     margin-top: -0.5em;
@@ -391,7 +389,7 @@ nav a:active {
 .liens-footer {
     display: flex;
     flex-direction: column;
-    margin-right: 15em;
+    margin-right: 20%;
 }
 .liens-footer li {
     list-style-type: none;
@@ -411,28 +409,27 @@ nav a:active {
     .main-container {
         max-width: 1024px;
     }
+    body {
+        width: 100%;
+    }
     .hebergements-and-populaires {
         flex-direction: column;
         gap: 20px;
     }
-
+    .hebergements-and-populaires section {
+        padding: 21px;
+    }
     .hebergements {
         width: 100%;
     }
-
     .hebergements-cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
     }
 
     .hebergements-cards a {
         width: 30%;
     }
-    .hebergements-cards .card {
-        width: 100%;
-    }
-
     .hebergements-cards .card-title {
         font-size: 14px;
     }
@@ -451,9 +448,17 @@ nav a:active {
         flex-direction: row;
         justify-content: space-between;
     }
+    .populaires-cards img {
+        width: 29%;
+        height: 136px;
+    }
 
     .populaires-cards a {
-        width: 30%;
+        width: 32%;
+    }
+
+    .populaires-cards .card {
+        margin-top: 21px;
     }
 
     .populaires-cards .card-title {
@@ -463,11 +468,26 @@ nav a:active {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
-    body {
-        width: 100%;
+
+    .activites-cards a {
+        width: 22%;
+    }
+
+    .activites-cards img {
+        height: 189px;
+    }
+    .activites .card-title {
+        margin-left: 9%;
+        font-size: 15px;
+    }
+    .activites h3 {
+        height: 36px;
+    }
+    .footer {
+        margin-top: 3em;
     }
     .liens-footer {
-        margin: 0;
+        margin-right: 5em;
     }
 }
 
