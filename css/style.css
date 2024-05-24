@@ -22,6 +22,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -89,6 +90,7 @@ nav a:active {
     color: #0065FC;
     padding-top: 0.9em;
 }
+
 /**** Research ************/
 .barre-recherche {
     display: flex;
@@ -147,6 +149,7 @@ nav a:active {
     cursor: pointer;
     margin-left: -0.15em;
   }
+
 /****** Filtres **********/
 .filtres-recherche {
     margin-top: 35px;
@@ -158,6 +161,11 @@ nav a:active {
     margin: 0;
     font-size: 1.125em;
     font-weight: 700;
+}
+.filtres {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 .filtre1,
 .filtre2 {
@@ -395,7 +403,7 @@ nav a:active {
     list-style-type: none;
     margin-top: 0.5em;
 }
-.liens-footer p {
+.liens-footer .titre-footer {
     font-weight: bold;
 }
 
@@ -412,9 +420,21 @@ nav a:active {
     body {
         width: 100%;
     }
+    .filtres-recherche {
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .filtres-recherche .filtres {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .filtres-recherche .filtre-title {
+        text-align: start;
+        margin-bottom: 10px;
+    }
     .hebergements-and-populaires {
         flex-direction: column;
-        gap: 20px;
     }
     .hebergements-and-populaires section {
         padding: 21px;
@@ -579,6 +599,9 @@ nav {
     flex-direction: column;
     align-items: normal;
     margin: 7%;
+}
+.filtres-recherche .filtres {
+    flex-direction: column;
 }
 .filtre {
     width: 48%;
