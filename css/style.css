@@ -22,6 +22,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -402,7 +403,7 @@ nav a:active {
     list-style-type: none;
     margin-top: 0.5em;
 }
-.liens-footer p {
+.liens-footer .titre-footer {
     font-weight: bold;
 }
 
